@@ -104,7 +104,12 @@ namespace WebApp.Controllers
 
             return View("Invoice", InvoiceModel.Example());
         }
+        public async Task<IActionResult> Chart()
+        {
+            ViewBag.SectionScores = new List<int>[12, 19, 3, 17, 6, 3, 7];
 
+            return View();
+        }
         [MiddlewareFilter(typeof(JsReportPipeline))]
         public async Task<IActionResult> ChartWithPrintTrigger()
         {
