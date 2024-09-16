@@ -106,7 +106,7 @@ namespace WebApp.Controllers
         }
         public async Task<IActionResult> Chart()
         {
-            ViewBag.SectionScores = new List<int>[12, 19, 3, 17, 6, 3, 7];
+            ViewBag.SectionScores = new List<int> { 12, 19, 3, 17, 6, 3, 7 };
 
             return View();
         }
